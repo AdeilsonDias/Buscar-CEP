@@ -1,0 +1,123 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+}
+body {
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 47%, rgba(0,0,0,1) 100%);
+  color: wheat;
+}
+.container_cep {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+.container_cep h1 {
+  color: blue;
+  font-size: 3rem;
+  background: -webkit-linear-gradient(#000000, #faf1f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ letter-spacing: 0.2rem;
+ margin-bottom: 0.7rem;
+ animation: flipTitle 2s;
+ 
+}
+
+.operations_style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+
+}
+.operations_style input {
+  width:18rem;
+  height: 2rem;
+  border-radius: 0.4rem ;
+  outline: none;
+  background-color: #3b3939;
+  padding: 1.4rem;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.operations_style input::placeholder {
+  color: rgb(214, 210, 210);
+  font-size: 1rem;
+}
+
+.operations_style button {
+  display: flex;
+  height: 3rem;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  background-color: rgb(90, 84, 84);
+  color: white;
+  font-size: 1rem;
+  align-items: center;
+  transition: .3s ease-in;
+  cursor: pointer;
+}
+.operations_style button:hover{
+  background-color: rgb(56, 55, 55);
+ transform: scale(1.1);
+}
+
+.information_cep {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1rem;
+  background-color: #3b3939;
+  padding: 1.5rem;
+  border-radius: 1.6rem;
+  box-shadow: inset 10px 8px 8px rgb(24, 24, 26);
+}
+.information_cep p{
+  color: white;
+  font-size: 1.3rem;
+}
+.information_cep span {
+  color: rgb(29, 250, 0);
+
+}
+@media screen and (max-width:444px) {
+  .container_cep h1{
+    font-size: 2rem;
+  }
+  .operations_style input{
+    width: 14rem;
+  }
+  .information_cep{
+    padding: 1rem;
+  }
+  .information_cep p{
+    font-size: 1.1rem;
+  }
+  
+}
+/* Animação Titlle "Buscador de CEP " */
+@keyframes flipTitle {
+  from{
+    transform: rotateX(90deg);
+  }
+  to{
+    transform: rotateX(0deg);
+  }
+  
+}
+@media screen and (max-width:444px){
+  .container_cep{
+    transform: scale(70%);
+  }
+}
+
+
